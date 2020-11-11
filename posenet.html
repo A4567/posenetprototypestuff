@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <link rel="stylesheet" href="style.scss">
+    <title>Archie's Dissertation Blog</title>
+    <link rel="icon" type="image/ico" href="https://archiehollyfield.co.uk/media/shapecon.png">
+</head>
+
+<body style="position: relative;overflow: hidden; margin: 0; width: 100vw; height: 100vh">
+<div class="container" style="position: relative; height: 100%;width: 100%; display:flex;justify-content: center;align-items: center;">
+    <video height="480px" width="640px" autoplay="true" id="videoElement" style="position: absolute;top: 0; left:0;opacity: 0.2;display: block"></video>
+    <canvas id="canvas" width="640" height="480" style="position: absolute;z-index: 9999;background: transparent;top: 0;left: 0;"></canvas>
+    <div id="content" style="position:absolute; height: 300px; width: 400px;">
+
+    </div>
+</div>
+<style>
+    .top{
+        background: red;
+    }
+    .bottom{
+        background: blue;
+    }
+    .left{
+        background: orange;
+    }
+    .right{
+        background: green;
+    }
+</style>
+</body>
+<!-- Place your code in the script tag below. You can also use an external .js file -->
+<script src="posenet.js"></script>
+</html>
